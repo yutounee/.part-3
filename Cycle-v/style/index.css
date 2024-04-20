@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background-image: url("../images/bg.jpg");
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* helper ------------------- */
+
+.container {
+  max-width: 1140px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mask {
+  overflow: hidden;
+}
+
+/* module: cycle -------------------------------- */
+
+.cycle {
+  position: relative;
+}
+
+.cycle-body {
+  aspect-ratio: 1140 / 555;
+}
+
+.cycle-foot {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.cycle-ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+}
+
+.cycle-li-active {
+  display: block;
+}
+
+.cycle-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cycle-pagination {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-indent: -9999px;
+  background-color: #000;
+  border-radius: 5px;
+  opacity: .5;
+  transition-duration: .3s;
+}
+
+.cycle-pagination-active {
+  width: 2rem;
+  background-color: #00aeeb;
+  opacity: 1;
+}
+
+.cycle-btn {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  width: 27px;
+  height: 44px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  opacity: .3;
+  transition-duration: .3s;
+}
+
+.cycle-btn:hover {
+  opacity: 1;
+  cursor: pointer
+}
+
+.cycle-btn-prev {
+  left: 0;
+  background-image: url("../images/prev.svg");
+}
+
+.cycle-btn-next {
+  right: 0;
+  background-image: url("../images/next.svg");
+}
+
+/* Module: fade ----------------------- */
+
+.cycle-fade .cycle-li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.cycle-fadeIn {
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+/* Module: slide ----------------------- */
+
+.cycle-slide .cycle-ul {
+  display: flex;
+  transition-duration: .5s;
+}
+
+/* RWD ---------------------------------- */
+
+@media screen and (max-width: 800px) {
+  .cycle-body {
+    aspect-ratio: 800 / 938;
+  }
+  .cycle-btn-prev {
+    left: 10px;
+  }
+  .cycle-btn-next {
+    right: 10px;
+  }
+}
+
